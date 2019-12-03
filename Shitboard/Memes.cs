@@ -125,7 +125,7 @@ namespace Shitboard
             if (CurrentSource == Source.STATIC)
             {
                 string[] staticMemes = Regex.Split(_staticText, "[\r\n]{2,}");
-                _currentMeme = staticMemes[rand.Next(0, staticMemes.Length - 1)];
+                _currentMeme = staticMemes[rand.Next(0, staticMemes.Length)];
                 OnPropertyChanged("CurrentMeme");
                 return _currentMeme;
             }
